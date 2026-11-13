@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | DulceMomento</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header class="menu">
+
+        <div class="logo-descripcion">
+            <img class="logo-principal" src="../img/logo.png" alt="Logo">
+            <p>DulceMomento</p>
+        </div>
+
+        <ul class="menu-principal">
+            <li><a href="../index.html#inicio">Inicio</a></li>
+            <li><a href="../index.html#productos">Productos</a></li>
+            <li><a href="../index.html#nosotros">Sobre nosotros</a></li>
+            <li><a href="contactame.html">Contacto</a></li>
+        </ul>
+
+    </header>
+
+
+    <!-- REGISTRO -->
+    <main class="pagina-registro">
+
+        <div class="registro-contenedor">
+
+            <div class="registro-titulo">
+
+                <h1>¡Únete a DulceMomento!</h1>
+
+                <p>
+                    Regístrate con nosotros y disfruta
+                    de nuestros deliciosos pasteles.
+                </p>
+
+            </div>
+
+
+            <form class="formulario-registro"
+                  id="formularioRegistro">
+
+                <h2>Crear una cuenta</h2>
+
+                <!-- NOMBRE -->
+                <label for="nombre">Nombre completo</label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ingresa tu nombre"
+                    required
+                >
+
+
+                <!-- CORREO -->
+                <label for="correo">Correo electrónico</label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@gmail.com"
+                    required
+                >
+
+
+                <!-- TELEFONO -->
+                <label for="telefono">Número de teléfono</label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Ej. 70000000"
+                    pattern="[0-9+() -]{7,20}"
+                    required
+                >
+
+
+                <!-- BOTON -->
+                <button type="submit">
+                    Registrarme
+                </button>
+
+                <p class="texto-registro">
+                    ¡Gracias por elegir DulceMomento!
+                </p>
+
+                <p id="mensajeRegistro" role="status"></p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- PIE DE PAGINA -->
+    <footer class="pie-pagina">
+
+        <div class="contenedor-pie-pagina">
+
+            <h3>DulceMomento</h3>
+
+            <p>
+                &copy; 2026 DulceMomento.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+        <div class="footer-iconos">
+
+            <a href="https://www.instagram.com/"
+               target="_blank"
+               rel="noopener noreferrer">Instagram</a>
+
+            <a href="https://www.facebook.com/"
+               target="_blank"
+               rel="noopener noreferrer">Facebook</a>
+
+            <a href="https://www.whatsapp.com/"
+               target="_blank"
+               rel="noopener noreferrer">WhatsApp</a>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        const formulario = document.getElementById("formularioRegistro");
+
+        formulario.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("mensajeRegistro").textContent =
+                "¡Gracias por registrarte en DulceMomento!";
+
+            formulario.reset();
+
+        });
+    </script>
+
+</body>
+</html>
